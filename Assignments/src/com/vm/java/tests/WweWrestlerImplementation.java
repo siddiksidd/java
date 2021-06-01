@@ -61,6 +61,7 @@ static long wrestlersCount(ArrayList<Wwe> wwe) {
 		wwe.add(new Wwe("shemus","whit",180));
 		
 		wwe.stream().map(n->n.getFirstName()).forEach(System.out::println);
+		
 		System.out.println("Wrestlers Count:"+wrestlersCount(wwe));
 		long sum=wwe.stream().collect(Collectors.summarizingInt(Wwe::getWeight)).getSum();
 		System.out.println("Sum of wrestelersweight"+sum);
